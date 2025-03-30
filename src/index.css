@@ -1,0 +1,4 @@
+@import "tailwindcss";
+main{
+    flex-grow: 1;
+}
