@@ -1,4 +1,4 @@
-import { useContext } from "react";
+
 import { useAuth } from "../context/AuthContext";
 import { Link } from "react-router-dom";
 import { Search, LogOut, PlusCircle } from "lucide-react";

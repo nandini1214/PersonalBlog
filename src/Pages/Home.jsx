@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import {  useBlog } from "../context/BlogContext";
-import BlogCard from "../components/BlogCard";
+import BlogCard from "../Components/BlogCard";
 import { Link } from "react-router-dom";
 
 const Home = () => {

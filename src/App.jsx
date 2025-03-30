@@ -1,6 +1,12 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 
-import {Navbar,Login,NewBlog,BlogDetails,Footer,Home} from './index';
+import Navbar from "./Components/NavBar";
+import Login from "./Pages/Login";
+import NewBlog from "./Pages/NewBlog";
+import BlogDetails from "./Pages/BlogDetails";
+import Footer from "./Components/Footer";
+import Home from "./Pages/Home";
+
 import { useAuth } from "./context/AuthContext";
 
 function App() {
@@ -13,9 +19,14 @@ function App() {
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/home" element={user ? <Home /> : <Navigate to="/" />} />
-          <Route path="/new-blog" element={user ? <NewBlog /> : <Navigate to="/" />} />
-          <Route path="/blog/:id" element={user ? <BlogDetails /> : <Navigate to="/" />} />
-          
+          <Route
+            path="/new-blog"
+            element={user ? <NewBlog /> : <Navigate to="/" />}
+          />
+          <Route
+            path="/blog/:id"
+            element={user ? <BlogDetails /> : <Navigate to="/" />}
+          />
         </Routes>
       </main>
       <Footer />
